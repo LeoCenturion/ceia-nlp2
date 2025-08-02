@@ -1,0 +1,145 @@
+### Currículum 1: Desarrollador de Software
+
+**Nombre:** Ana García
+**Contacto:** anagarcia@email.com | 555-1234-5678 | [linkedin.com/in/anagarcia](https://www.google.com/search?q=https://linkedin.com/in/anagarcia)
+
+**Resumen:**
+Desarrolladora de software con 7 años de experiencia en el ciclo completo de desarrollo de aplicaciones web. Experta en **Python**, **Django** y **React**. He liderado proyectos desde la conceptualización hasta la implementación, mejorando la eficiencia y la escalabilidad.
+
+**Experiencia Profesional:**
+
+  * **Ingeniera de Software Senior** | Tech Solutions S.A. | Ene 2020 - Presente
+      * Lideré un equipo de 5 desarrolladores en la creación de una plataforma de e-commerce, reduciendo los tiempos de carga en un 30%.
+      * Diseñé y optimicé la arquitectura de microservicios.
+  * **Desarrolladora de Software** | Innovatech | Mar 2017 - Dic 2019
+      * Desarrollé y mantuve APIs RESTful para la integración de servicios externos.
+      * Participé en la migración de una base de datos legacy a PostgreSQL.
+
+**Educación:**
+
+  * **Licenciatura en Ciencias de la Computación** | Universidad Nacional de Buenos Aires (UBA) | 2013-2017
+
+**Habilidades:**
+
+  * **Lenguajes de Programación:** Python, JavaScript, Java, Go
+  * **Frameworks:** Django, Flask, React, Node.js
+  * **Bases de Datos:** PostgreSQL, MySQL, MongoDB
+  * **Herramientas:** Docker, Git, AWS, Jira
+
+-----
+
+### Currículum 2: Diseñadora Gráfica Senior
+
+**Nombre:** Carlos López
+**Contacto:** carlos.lopez@email.com | 555-9876-5432 | [portfolio.com/carloslopez](https://www.google.com/search?q=https://portfolio.com/carloslopez)
+
+**Resumen:**
+Diseñador gráfico con 10 años de trayectoria, especializado en identidad de marca y diseño editorial. Capacidad probada para conceptualizar y ejecutar campañas visuales impactantes que conectan con la audiencia.
+
+**Experiencia Profesional:**
+
+  * **Diseñador Gráfico Senior** | Estudio Creativo Visual | Feb 2018 - Presente
+      * Desarrollé la identidad visual completa para más de 15 marcas, incluyendo logotipos, paletas de colores y guías de estilo.
+      * Gestioné proyectos de diseño desde el briefing inicial hasta la entrega final, coordinando con equipos de marketing y clientes.
+  * **Diseñador Gráfico** | Agencia Publicitaria X | May 2014 - Ene 2018
+      * Creé material gráfico para campañas digitales y tradicionales, como flyers, banners y anuncios impresos.
+      * Colaboré en la maquetación de revistas y libros.
+
+**Educación:**
+
+  * **Grado en Diseño Gráfico** | Escuela Superior de Diseño de Madrid | 2010-2014
+
+**Habilidades:**
+
+  * **Software:** Adobe Creative Suite (Photoshop, Illustrator, InDesign, After Effects)
+  * **Diseño:** Identidad de marca, Diseño UX/UI, Diseño editorial, Tipografía
+  * **Herramientas:** Figma, Sketch
+
+-----
+
+### Currículum 3: Gerente de Proyectos de Construcción
+
+**Nombre:** Sofía Ramírez
+**Contacto:** sofia.ramirez@email.com | 555-4567-8901 | [linkedin.com/in/sofiaramirez](https://www.google.com/search?q=https://linkedin.com/in/sofiaramirez)
+
+**Resumen:**
+Gerente de proyectos con 12 años de experiencia en la dirección y supervisión de obras de construcción. He completado exitosamente proyectos de gran escala, asegurando el cumplimiento de plazos, presupuestos y estándares de calidad.
+
+**Experiencia Profesional:**
+
+  * **Gerente de Proyectos de Construcción** | Constructora del Sur | Mar 2015 - Presente
+      * Supervisé la construcción de un complejo de oficinas de 20.000 m², finalizando el proyecto 2 meses antes de lo previsto y un 5% por debajo del presupuesto.
+      * Gestioné equipos de trabajo de hasta 50 personas, coordinando subcontratistas y proveedores.
+  * **Jefa de Obra** | Inmobiliaria Sol | Jun 2010 - Feb 2015
+      * Planifiqué y ejecuté proyectos de viviendas multifamiliares, desde la fase inicial hasta la entrega.
+      * Controlé la calidad de los materiales y la ejecución de la obra.
+
+**Educación:**
+
+  * **Máster en Dirección de Proyectos** | IE Business School | 2014-2015
+  * **Ingeniería Civil** | Universidad Politécnica de Valencia | 2005-2010
+
+**Habilidades:**
+
+  * **Gestión de Proyectos:** PMI, Metodología Scrum, Planificación y control de costes
+  * **Software:** AutoCAD, MS Project, Revit
+  * **Certificaciones:** PMP (Project Management Professional)
+
+-----
+
+### Currículum 4: Especialista en Marketing Digital
+
+**Nombre:** Pablo Fernández
+**Contacto:** pablo.fernandez@email.com | 555-2345-6789 | [linkedin.com/in/pablofernandez](https://www.google.com/search?q=https://linkedin.com/in/pablofernandez)
+
+**Resumen:**
+Especialista en marketing digital con 6 años de experiencia en la creación y optimización de estrategias que impulsan el crecimiento de marca y las conversiones. Experto en **SEO**, **SEM** y **redes sociales**.
+
+**Experiencia Profesional:**
+
+  * **Especialista en Marketing Digital** | Agencia de Marketing Digital S.L. | Oct 2019 - Presente
+      * Gestioné campañas de Google Ads y Facebook Ads con un presupuesto mensual de $10.000, logrando un ROI promedio de 5:1.
+      * Implementé estrategias SEO que aumentaron el tráfico orgánico en un 40% en un año.
+  * **Asistente de Marketing** | Start-up de Tecnología | Ago 2017 - Sep 2019
+      * Colaboré en la gestión de las redes sociales, creando contenido y analizando métricas.
+      * Participé en la optimización de la página web para mejorar la experiencia del usuario.
+
+**Educación:**
+
+  * **Máster en Marketing Digital** | ESIC Business & Marketing School | 2018-2019
+  * **Licenciatura en Publicidad y Relaciones Públicas** | Universidad Complutense de Madrid | 2013-2017
+
+**Habilidades:**
+
+  * **Marketing:** SEO, SEM, Estrategia de Contenidos, Marketing en Redes Sociales
+  * **Herramientas:** Google Analytics, Google Ads, Ahrefs, Semrush, Meta Business Suite
+  * **Idiomas:** Español (nativo), Inglés (avanzado)
+
+-----
+
+### Currículum 5: Enfermera
+
+**Nombre:** Laura Gámez
+**Contacto:** laura.gamez@email.com | 555-6543-2109 | [linkedin.com/in/lauragamez](https://www.google.com/search?q=https://linkedin.com/in/lauragamez)
+
+**Resumen:**
+Enfermera con 8 años de experiencia en el cuidado de pacientes en entornos hospitalarios, con especialidad en cuidados intensivos. Comprometida con la salud y el bienestar del paciente, con sólidas habilidades de comunicación y trabajo en equipo.
+
+**Experiencia Profesional:**
+
+  * **Enfermera de Cuidados Intensivos** | Hospital Central | Jul 2018 - Presente
+      * Brindé cuidados especializados a pacientes críticos, administrando medicación y monitorizando signos vitales.
+      * Colaboré con el equipo médico para desarrollar planes de atención individualizados.
+  * **Enfermera de Planta** | Clínica Santa Lucía | Ago 2015 - Jun 2018
+      * Realicé la valoración inicial de pacientes, registrando su historial médico y síntomas.
+      * Eduqué a pacientes y familiares sobre el manejo de enfermedades y la recuperación.
+
+**Educación:**
+
+  * **Grado en Enfermería** | Universidad de Barcelona | 2011-2015
+
+**Habilidades:**
+
+  * **Habilidades Clínicas:** Administración de medicamentos, Cuidados postoperatorios, Reanimación cardiopulmonar (RCP)
+  * **Habilidades Interpersonales:** Empatía, Trabajo en equipo, Comunicación efectiva
+  * **Certificaciones:** ACLS (Soporte Vital Avanzado Cardiovascular)
