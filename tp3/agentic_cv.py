@@ -108,13 +108,6 @@ def call_model(prompt, system="You are a helpful assistant.") -> str:
     )
     return chat_completion.choices[0].message.content or ""
 
-# def call_model(messages: List[Dict[str, str]]) -> str:
-#     chat_completion = client.chat.completions.create(
-#         messages=messages,
-#         model="llama-3.3-70b-versatile",
-#     )
-#     return chat_completion.choices[0].message.content or ""
-
 
 class AgentState(TypedDict):
     query: str
@@ -135,7 +128,10 @@ def people_identifier(state: AgentState):
         allowed_people.append(get_namespace_from_filename(filename))
     allowed_people = ",".join(allowed_people)
     response = call_model(
-        f"Your task is to return a list of People mentioned in this query. If the queries makes reference to the person writing the query you should include 'user' in the list. \
+        f"Your task is to return a list of People mentioned in this query.\
+        If the query is in first person or doesn't specify a person then you should add leonardo_centurion. \
+        eg: How many years of experience do i have? -> leonardo_centurion \
+        return the list of people and no other comments\
         The list should be separated by commas. \
         The list of people that can be referenced are: {allowed_people}\
         Present the people mentioend with the above format. \
@@ -163,14 +159,21 @@ def user_router(state: AgentState):
             Person: {person}\
             Question:"
         )
-        print(f"[user_route][{person}]: {query}")
-        people_dict[person] = pc_registry.query(query, namespace = person.lower())
+        context = pc_registry.query(query, namespace = person.lower())
+        people_dict[person] = context
     return { 'people_mentioned': people_dict }
 
 def aggregator(state: AgentState):
     context = [f"{person}: {' '.join(ctx)}" for person, ctx in state['people_mentioned'].items()]
     response = call_model(
-        f"You're a human resources expert. Your job is to answer the questions about different candidates. For the given 'context' answer the 'question': \
+        f"You're a human resources expert. Your job is to answer the questions about different candidates. \
+        When evaluating professional experience. Examples: \
+        Candidate 1: job A (2000 - 2015), job b (2010 - 2025). Candidate 1 the earliest year is 2000, the latest year is 2025. The candidate hasn't stopped working. So the answer is 2025 - 2000 = 25 years of experience \
+        Candidate 2: job A (2000 - 2015), job b (2020 - 2025). Candidate 2 has worked from 2000 to 2015 and from 2020 to 2025 therefore he has (2015 - 2000) + (2025 - 2020) = 15 + 5 = 20 years of experience  \
+       Candidate 3: job A (2000 - 2018), job b (2010 - 2025), job c (2005 - 2024). Candidate 3 has worked from 2000 to 2025 uninterruptedly so he has 2025 - 2020 = 25 years of experience"
+        f"Based on the following context from CVs, please answer the user's question.\
+        Use short answers.\
+        For the given 'context' answer the 'question': \
         Context: {context} \
         Question: {state['query']}"
     )
@@ -178,6 +181,8 @@ def aggregator(state: AgentState):
     return {"answer": response}
 
 if __name__ == "__main__":
+    st.title("CV Agent")
+
     builder = StateGraph(AgentState)
     builder.add_node("people_identifier", people_identifier)
     builder.add_node("user_router", user_router)
@@ -188,24 +193,41 @@ if __name__ == "__main__":
     builder.add_edge("user_router", "aggregator")
     builder.add_edge("aggregator", END)
 
-    query = "Cuantos años de experiencia tiene Anthony?"
     memory = MemorySaver()
     graph = builder.compile(checkpointer=memory)
-    thread_id = uuid.uuid4()
-    config = {"configurable": {"thread_id": thread_id}}
-    state: AgentState =  {"query": query}
 
-    graph.invoke(state, config)
-    # while True:
-    #     try:
-    #         user_input = input("User: ")
-    #         if user_input.lower() in ["quit", "exit", "q"]:
-    #             print("Goodbye!")
-    #             break
-    #         graph.invoke(state)
-    #     except:
-    #         # fallback if input() is not available
-    #         user_input = "What do you know about LangGraph?"
-    #         print("User: " + user_input)
-    #         stream_graph_updates(user_input)
-    #         break
+    query = st.text_input("Enter your query:")
+
+    if st.button("Submit"):
+        if query:
+            thread_id = uuid.uuid4()
+            config = {"configurable": {"thread_id": thread_id}}
+            state: AgentState = {"query": query}
+
+            people_placeholder = st.empty()
+            context_placeholder = st.empty()
+            answer_placeholder = st.empty()
+
+            for event in graph.stream(state, config):
+                node_name, state_after_node = list(event.items())[0]
+
+                if node_name == "people_identifier":
+                    with people_placeholder.container():
+                        st.subheader("Identified People")
+                        people = list(state_after_node['people_mentioned'].keys())
+                        st.write(people)
+
+                if node_name == "user_router":
+                    with context_placeholder.container():
+                        st.subheader("Fetched Context")
+                        for person, context in state_after_node['people_mentioned'].items():
+                            st.write(f"**{person}**")
+                            if context:
+                                st.text_area(f"Context for {person}:", "\n".join(context), height=150, key=f"context_{person}")
+                            else:
+                                st.write("No context found.")
+                
+                if node_name == "aggregator":
+                    with answer_placeholder.container():
+                        st.subheader("Final Answer")
+                        st.write(state_after_node.get("answer", "No answer found."))
