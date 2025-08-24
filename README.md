@@ -25,7 +25,7 @@ This project contains a collection of scripts and applications for Natural Langu
 3.  **Activate the virtual environment:**
 
     ```bash
-    poetry shell
+    poetry env activate
     ```
 
 4.  **API Keys:**
